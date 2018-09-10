@@ -182,6 +182,11 @@ class SimpleHttpServer():
     self.server_thread.daemon = True
     self.server_thread.start()
     strip.begin()
+
+    colorWipe(strip, Color(255, 0, 0))  # Red wipe
+    colorWipe(strip, Color(0, 255, 0))  # Blue wipe
+    colorWipe(strip, Color(0, 0, 255))  # Green wipe
+    colorWipe(strip, Color(0,0,0), 10)
     print "strip loaded"
  
   def waitForThread(self):
